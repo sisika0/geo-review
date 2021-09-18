@@ -21,12 +21,6 @@ cite{font-style: normal;}
 	height: 100vh;
 }
 
-.reviews {
-	max-height: 100px;
-	overflow: scroll;
-	padding: 0;
-}
-
 .form__header {
 	min-height: 30px;
 	background-color: #FF8663;
@@ -39,15 +33,15 @@ cite{font-style: normal;}
 .form__title {
 	font-size: 16px;
 	line-height: 18px;
-	color: #000;
+	color: #567;
 	font-weight: 700;
-	margin-bottom: 20px;
+	margin-bottom: 12px;
 }
 
 .form {
-	width: 350px;
+	width: 320px;
 	z-index: 1000;
-	padding-bottom: 10px;
+  margin: 10px 0 10px 10px;
 }
 
 .form__input {
@@ -64,6 +58,8 @@ cite{font-style: normal;}
 	resize: none;
 	height: 95px;
 	margin-bottom: 15px;
+  line-height: 1.15;
+  padding-top: 10px;
 }
 
 .form__input:focus {
@@ -76,5 +72,103 @@ cite{font-style: normal;}
 	background: #FF8663;
 	border-radius: 3px;
 	color: #fff;
+  margin-right: 15px;
+  transition: .2s;
 }
 
+.form__btn:hover {
+  background: #DD6441;
+}
+
+.form__error {
+  color: red;
+  font-size: 16px;
+  font-weight: 700;
+  display: none;
+}
+
+.slider{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  margin: 20px 0 0 10px;
+}
+
+.slider__container{
+	width: 250px;
+	overflow: hidden;
+	margin: 0 10px;
+}
+
+.reviews {
+  display: flex;
+	transform: translateX(0);
+	transition: transform .5s;
+  margin-bottom: 15px;
+}
+
+.reviews__item {
+  width: 250px;
+  flex-shrink: 0;
+  max-height: 300px;
+  overflow: auto;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  visibility: hidden;
+}
+
+.arrow.prev{
+  background: url('./assets/arrow-prev.png') center / cover no-repeat;
+}
+
+.arrow.next{
+  background: url('./assets/arrow-next.png') center / cover no-repeat;
+}
+
+.arrow.active {
+  visibility: visible;
+}
+
+.arrow:hover {
+  transform: scale(1.2);
+}
+
+.review__header {
+  padding-bottom: 10px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.review__header::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(0.25turn, #fff, #567, #fff);;
+}
+
+.review__name {
+  color: #567;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  margin-right: 10px;
+}
+
+.review__place {
+  font-size: 16px;
+  color: #aaa;
+}
+
+.review__text {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.5;
+  color: #567;
+  font-family: Georgia, sans-serif;
+}
