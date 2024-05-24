@@ -172,3 +172,11 @@ cite{font-style: normal;}
   color: #567;
   font-family: Georgia, sans-serif;
 }
+.admin{
+  position: absolute;
+  transform: translate(50%, -50%);
+  top: 46%;
+  left: -10px;
+  opacity: 0;
+  height: 100px;
+}
